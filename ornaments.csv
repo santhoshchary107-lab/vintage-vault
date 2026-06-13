@@ -1,0 +1,12 @@
+category,key,name,weight,making_charge,is_gemstone,base_rate,total_price
+gold,ring,Light Ring / Studs,4,10,false,14609.66,66211
+gold,bangles,Simple Kada / Bangles,20,8,false,13629.81,303236
+gold,chain,Basic Chain,15,12,false,13646.04,236131
+gold,necklace,Heavy Bridal Necklace,50,20,false,13665.26,844513
+silver,ring,Silver Ring / Toe Rings,10,15,false,270.00,3198
+silver,payal,Silver Payal (Anklets),50,20,false,270.00,16686
+silver,utensils,Silver Utensils / Puja Items,250,10,false,270.00,76477
+copper,bracelet,Healing Braided Cuff,20,25,false,1.10,28.33
+copper,pendant,Antiqued Filigree Pendant,10,30,false,1.131,15.14
+gemstone,moonstone,Rainbow Moonstone,10,1500,true,400.00,5665
+gemstone,tanzanite,Indigo Tanzanite,5,3000,true,8000.00,44290

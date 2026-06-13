@@ -1,0 +1,12 @@
+Category,Key,Name,Default Weight,Making/Setting Charge,Is Gemstone,Base Rate (INR),Est. Total Price (INR)
+GOLD,ring,"Light Ring / Studs",4 Grams,10%,No,14609.66,66211
+GOLD,bangles,"Simple Kada / Bangles",20 Grams,8%,No,13629.81,303236
+GOLD,chain,"Basic Chain",15 Grams,12%,No,13646.04,236131
+GOLD,necklace,"Heavy Bridal Necklace",50 Grams,20%,No,13665.26,844513
+SILVER,ring,"Silver Ring / Toe Rings",10 Grams,15%,No,270.00,3198
+SILVER,payal,"Silver Payal (Anklets)",50 Grams,20%,No,270.00,16686
+SILVER,utensils,"Silver Utensils / Puja Items",250 Grams,10%,No,270.00,76478
+COPPER,bracelet,"Healing Braided Cuff",20 Grams,25%,No,1.10,28
+COPPER,pendant,"Antiqued Filigree Pendant",10 Grams,30%,No,1.13,15
+GEMSTONE,moonstone,"Rainbow Moonstone",10 Carats,₹1500 Flat,Yes,400.00,5665
+GEMSTONE,tanzanite,"Indigo Tanzanite",5 Carats,₹3000 Flat,Yes,8000.00,44290

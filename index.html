@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Vintage Vault — Old & Rare Ornaments</title>
+  <meta name="description" content="Explore and estimate values of rare and vintage gold, silver, copper, and gemstone ornaments. Use our real-time Billing Calculator and Future Value Predictor based on global research.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER & STICKY NAVIGATION -->
+  <nav>
+    <a href="#" class="logo-wrap" id="logo">
+      <img src="assets/gold_choker.png" alt="The Vintage Vault Logo" class="logo-img">
+      <div class="logo-text">
+        THE VINTAGE VAULT
+        <span>OLD & RARE ORNAMENTS</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#valuation">Market Rates</a>
+      <a href="#pricing-calculator">Calculator</a>
+      <a href="#catalog">Showcase</a>
+      <a href="#purity-guide">Education</a>
+    </div>
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">☰</button>
+  </nav>
+
+  <!-- LIVE PRICE TICKER -->
+  <div class="ticker-container">
+    <div class="ticker-wrap">
+      <div class="ticker-list">
+        <div class="tick">
+          <span class="tick-dot"></span>
+          <span class="tick-live">Live</span>
+          <span class="tick-lbl">24K Pure Gold:</span>
+          <span class="tick-val" id="ticker-gold24">₹14,908/g</span>
+        </div>
+        <div class="tick">
+          <span class="tick-lbl">22K Jewellery Gold:</span>
+          <span class="tick-val" id="ticker-gold22">₹13,665/g</span>
+        </div>
+        <div class="tick">
+          <span class="tick-lbl">Sterling Silver:</span>
+          <span class="tick-val" id="ticker-silver">₹270/g</span>
+        </div>
+        <div class="tick">
+          <span class="tick-lbl">Industrial Copper:</span>
+          <span class="tick-val" id="ticker-copper">₹900/kg</span>
+        </div>
+      </div>
+      <!-- Duplicate for infinite scrolling marquee -->
+      <div class="ticker-list">
+        <div class="tick">
+          <span class="tick-dot"></span>
+          <span class="tick-live">Live</span>
+          <span class="tick-lbl">24K Pure Gold:</span>
+          <span class="tick-val" id="ticker-gold24-dup">₹14,908/g</span>
+        </div>
+        <div class="tick">
+          <span class="tick-lbl">22K Jewellery Gold:</span>
+          <span class="tick-val" id="ticker-gold22-dup">₹13,665/g</span>
+        </div>
+        <div class="tick">
+          <span class="tick-lbl">Sterling Silver:</span>
+          <span class="tick-val" id="ticker-silver-dup">₹270/g</span>
+        </div>
+        <div class="tick">
+          <span class="tick-lbl">Industrial Copper:</span>
+          <span class="tick-val" id="ticker-copper-dup">₹900/kg</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-subtitle">Est. 1926 — Premium Metal Curations</p>
+      <h1 class="hero-title"><span class="gold-gradient-text">Rare Masterpieces</span><br>Preserved for Generations</h1>
+      <p class="hero-desc">Explore investment-grade gold, silver, copper, and gemstone ornaments. Assess real-time pricing and future valuation trajectories with our advanced planners.</p>
+      <a href="#pricing-calculator" class="hero-cta">Evaluate Jewelry Bill</a>
+    </div>
+  </header>
+
+  <main>
+    
+    <!-- VALUATION TABLE SECTION -->
+    <section class="wrapper" id="valuation">
+      <div class="section-header">
+        <h2>Precious Metals & Gemstones Valuation</h2>
+        <p>Market rates as of June 14, 2026, and future projections</p>
+      </div>
+
+      <div class="valuation-grid">
+        <div class="table-responsive">
+          <table class="valuation-table">
+            <thead>
+              <tr>
+                <th>Ornament Base Element</th>
+                <th>Current Market Price</th>
+                <th>Making / Setting Charges & Taxes</th>
+                <th>Future Price Trend (Next 5 Years)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="metal-name">24K Pure Gold</td>
+                <td id="table-gold24">~₹14,908 / g</td>
+                <td>Not applicable (Bullion coins/bars)</td>
+                <td class="trend-up">Very Bullish (Targeting $6,000/oz by end of 2026)</td>
+              </tr>
+              <tr>
+                <td class="metal-name">22K Jewellery Gold</td>
+                <td id="table-gold22">~₹13,665 / g</td>
+                <td>10% to 25% extra per gram</td>
+                <td class="trend-up">Steady upward climb driven by inflation hedging</td>
+              </tr>
+              <tr>
+                <td class="metal-name">92.5% Sterling Silver</td>
+                <td id="table-silver">~₹270 / g</td>
+                <td>10% to 20% extra per gram</td>
+                <td class="trend-up">Highly Volatile (Solar & Green Tech demand to $100/oz by 2030)</td>
+              </tr>
+              <tr>
+                <td class="metal-name">Pure Industrial Copper</td>
+                <td id="table-copper">~₹0.90 / g</td>
+                <td>Sold as flat retail items (markup applied)</td>
+                <td>Moderate growth tied to green grids & infrastructure</td>
+              </tr>
+              <tr>
+                <td class="metal-name">Rainbow Moonstone</td>
+                <td id="table-moonstone">~₹400 / carat</td>
+                <td>Flat setup fee: ~₹1,500 per piece</td>
+                <td class="trend-up">Steady (Appreciating due to collector demand)</td>
+              </tr>
+              <tr>
+                <td class="metal-name">Indigo Tanzanite</td>
+                <td id="table-tanzanite">~₹8,000 / carat</td>
+                <td>Flat setup fee: ~₹3,000 per piece</td>
+                <td class="trend-up">Very Bullish (Single-source depletion leading to high rarity)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Live Market Rate Customizer Panel -->
+        <div class="rate-customizer-panel">
+          <h3>Market Rate Customizer</h3>
+          <p class="customizer-subtitle">Adjust metal market rates to dynamically scale ornament prices vault-wide:</p>
+          
+          <div class="customizer-row">
+            <div class="form-group">
+              <label for="rate-gold24-input">24K Pure Gold (₹/g)</label>
+              <input type="number" id="rate-gold24-input" value="14908" min="5000" max="30000" step="1">
+            </div>
+            <div class="form-group">
+              <label for="rate-gold22-input">22K Jewellery Gold (₹/g)</label>
+              <input type="number" id="rate-gold22-input" value="13665" min="5000" max="30000" step="1">
+            </div>
+          </div>
+          
+          <div class="customizer-row">
+            <div class="form-group">
+              <label for="rate-silver-input">Sterling Silver (₹/g)</label>
+              <input type="number" id="rate-silver-input" value="270" min="50" max="2000" step="1">
+            </div>
+            <div class="form-group">
+              <label for="rate-copper-input">Industrial Copper (₹/kg)</label>
+              <input type="number" id="rate-copper-input" value="900" min="100" max="5000" step="1">
+            </div>
+          </div>
+
+          <button id="reset-rates-btn" class="btn-secondary-metallic" style="width: 100%; margin-top: 1rem;">
+            Reset to default rates
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULATOR & PROJECTION UNIT -->
+    <section class="valuation-section" id="pricing-calculator">
+      <div class="wrapper">
+        <div class="section-header">
+          <h2>Pricing & Investment Planner</h2>
+          <p>Estimate current jewelry bills and forecast future asset appreciation</p>
+        </div>
+
+        <div class="calculator-grid">
+          <!-- Widget Inputs -->
+          <div class="calc-widget">
+            <div class="tabs">
+              <button class="tab-btn active" data-tab="billing-tab">Billing Calculator</button>
+              <button class="tab-btn" data-tab="planner-tab">Future Value Predictor</button>
+            </div>
+
+            <!-- Tab 1: Billing -->
+            <div class="calc-tab-content active" id="billing-tab">
+              <!-- Cascading Dropdowns -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="calc-category">Category</label>
+                  <select id="calc-category">
+                    <option value="gold">Gold (22K & 18K)</option>
+                    <option value="silver">Silver (Pure 99.9%)</option>
+                    <option value="copper">Copper (Pure)</option>
+                    <option value="gemstone">Rare Gemstones</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="calc-item">Specific Ornament</label>
+                  <select id="calc-item">
+                    <!-- Populated dynamically by app.js -->
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row" style="margin-top: 1rem;">
+                <div class="form-group" style="grid-column: span 2;">
+                  <label for="calc-rate">Base Rate (₹ per <span id="rate-label">gram</span>)</label>
+                  <input type="number" id="calc-rate" value="13665.00" min="0.01" step="0.01" placeholder="e.g. 13665.00">
+                  <p class="helper-text">Pre-populated default base rate. Feel free to adjust to simulate custom pricing.</p>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="calc-weight" id="calc-weight-label">Weight (Grams)</label>
+                  <input type="number" id="calc-weight" value="30" min="0.1" step="0.1" placeholder="e.g. 30">
+                </div>
+                <div class="form-group">
+                  <label for="calc-making" id="calc-making-label">Making Charges (%)</label>
+                  <input type="number" id="calc-making" value="15" min="0" max="10000" step="1" placeholder="e.g. 15">
+                  <p class="helper-text" id="calc-making-helper">Avg: Gold (10-25%), Silver (10-20%)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Future Value -->
+            <div class="calc-tab-content" id="planner-tab">
+              <div class="form-group">
+                <label for="plan-year">Projection Year: <span id="selected-year" style="color: var(--accent-gold-light); font-weight: bold;">2030</span></label>
+                <input type="range" id="plan-year" min="2026" max="2030" value="2030" step="1">
+                <div class="slider-labels">
+                  <span>2026 (Current)</span>
+                  <span>2028</span>
+                  <span>2030 (Target)</span>
+                </div>
+                <p class="helper-text" style="margin-top: 1rem;">Projections are calibrated based on <b>J.P. Morgan Global Commodities Research</b> targets ($6,000/oz Gold, $100/oz Silver by 2030, and single-source scarcity of Tanzanite).</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Billing Summary Panel -->
+          <div class="summary-panel">
+            <h3>Summary & Invoice Estimate</h3>
+            <div class="summary-row">
+              <span class="label">Ornament Value</span>
+              <span class="value" id="bill-metal-val">₹4,09,950.00</span>
+            </div>
+            <div class="summary-row">
+              <span class="label">Making / Setting Fee</span>
+              <span class="value" id="bill-making-val">₹61,492.50</span>
+            </div>
+            <div class="summary-row">
+              <span class="label">Subtotal</span>
+              <span class="value" id="bill-subtotal-val">₹4,71,442.50</span>
+            </div>
+            <div class="summary-row">
+              <span class="label">GST (3% Jewelry Tax)</span>
+              <span class="value" id="bill-gst-val">₹14,143.28</span>
+            </div>
+            <div class="summary-row total">
+              <span class="label">Estimated Bill</span>
+              <span class="value" id="bill-total-val">₹4,85,585.78</span>
+            </div>
+
+            <!-- Future value chart info -->
+            <div class="future-chart-box">
+              <p style="font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase;">Future Value (2030 Projection)</p>
+              <div class="gain-amt" id="future-gain">+₹3,14,845.20</div>
+              <div class="percent-bubble" id="future-percent">+64.8% ROI</div>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.8rem; font-style: italic;">Asset Value: <span id="future-total">₹8,00,430.98</span></p>
+            </div>
+            
+            <!-- Export Receipt Button -->
+            <button id="export-invoice-csv" class="btn-primary-metallic" style="margin-top: 1.5rem; width: 100%;">
+              <svg class="icon-receipt" viewBox="0 0 24 24" width="16" height="16" style="margin-right: 8px; vertical-align: middle;">
+                <path fill="currentColor" d="M18 17H6v-2h12v2zm0-4H6v-2h12v2zm0-4H6V7h12v2zM3 22l1.5-1.5L6 22l1.5-1.5L9 22l1.5-1.5L12 22l1.5-1.5L15 22l1.5-1.5L18 22l1.5-1.5L21 22V2l-1.5 1.5L18 2l-1.5 1.5L15 2l-1.5 1.5L12 2l-1.5 1.5L9 2 7.5 3.5 6 2 4.5 3.5 3 2v20z"/>
+              </svg>
+              Export Receipt (CSV)
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURATED CATALOG / SHOWCASE -->
+    <section class="wrapper" id="catalog">
+      <div class="section-header">
+        <h2>Curated Ornament Catalog</h2>
+        <p>Premium antique pieces. Select an item to calculate custom billing values.</p>
+      </div>
+
+      <!-- Search & Filters Container -->
+      <div class="catalog-controls">
+        <div class="search-box-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="catalog-search" placeholder="Search ornaments by name, metal, description...">
+        </div>
+        
+        <div class="filter-tags">
+          <button class="filter-tag active" data-filter="all">All Collection</button>
+          <button class="filter-tag" data-filter="gold">Gold</button>
+          <button class="filter-tag" data-filter="silver">Silver</button>
+          <button class="filter-tag" data-filter="copper">Copper</button>
+          <button class="filter-tag" data-filter="gemstone">Gemstones</button>
+        </div>
+
+        <button id="download-catalog-csv" class="btn-secondary-metallic">
+          <svg class="icon-download" viewBox="0 0 24 24" width="16" height="16" style="margin-right: 6px; vertical-align: middle;">
+            <path fill="currentColor" d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+          </svg>
+          Download Catalog (CSV)
+        </button>
+      </div>
+
+      <div class="catalog-grid">
+        <!-- Item 1 (Gold) -->
+        <div class="catalog-card" data-category="gold">
+          <div class="card-img-wrap">
+            <img src="assets/gold_ring.png" alt="Gold Ring / Studs" class="card-img">
+            <span class="card-badge">22K Gold</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Light Ring / Studs</h3>
+            <div class="card-specs">
+              <span>Engagement / Daily</span>
+              <span>Weight: 4g</span>
+            </div>
+            <p class="card-desc">Delicate 22K gold rings and studs with elegant detailed carvings. Suitable for modern daily styling.</p>
+            <div class="card-valuation">
+              <div>Est. Price (4g)</div>
+              <p>₹66,211</p>
+            </div>
+            <button class="card-action-btn" onclick="loadCalculatorItem('gold', 'ring', 4, 10)">Load in Bill Calculator</button>
+          </div>
+        </div>
+
+        <!-- Item 2 (Gold) -->
+        <div class="catalog-card" data-category="gold">
+          <div class="card-img-wrap">
+            <img src="assets/gold_choker.png" alt="Simple Kada / Bangles" class="card-img" style="filter: hue-rotate(15deg) saturate(1.1);">
+            <span class="card-badge">22K Gold</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Simple Kada / Bangles</h3>
+            <div class="card-specs">
+              <span>Traditional Bangles</span>
+              <span>Weight: 20g</span>
+            </div>
+            <p class="card-desc">Handcrafted 22K gold kada bracelets displaying smooth circular patterns. Traditional style investment-grade asset.</p>
+            <div class="card-valuation">
+              <div>Est. Price (20g)</div>
+              <p>₹303,236</p>
+            </div>
+            <button class="card-action-btn" onclick="loadCalculatorItem('gold', 'bangles', 20, 8)">Load in Bill Calculator</button>
+          </div>
+        </div>
+
+        <!-- Item 3 (Gold) -->
+        <div class="catalog-card" data-category="gold">
+          <div class="card-img-wrap">
+            <img src="assets/gold_chain.png" alt="Basic Gold Chain" class="card-img">
+            <span class="card-badge">22K Gold</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Basic Gold Chain</h3>
+            <div class="card-specs">
+              <span>Classic Links</span>
+              <span>Weight: 15g</span>
+            </div>
+            <p class="card-desc">Heavy-link classic 22K gold chain, highly durable and polished to a bright yellow sheen. Fits all pendant settings.</p>
+            <div class="card-valuation">
+              <div>Est. Price (15g)</div>
+              <p>₹236,131</p>
+            </div>
+            <button class="card-action-btn" onclick="loadCalculatorItem('gold', 'chain', 15, 12)">Load in Bill Calculator</button>
+          </div>
+        </div>
+
+        <!-- Item 4 (Gold) -->
+        <div class="catalog-card" data-category="gold">
+          <div class="card-img-wrap">
+            <img src="assets/gold_choker.png" alt="Heavy Bridal Necklace" class="card-img">
+            <span class="card-badge">22K Gold</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Heavy Bridal Necklace</h3>
+            <div class="card-specs">
+              <span>Bridal Heritage</span>
+              <span>Weight: 50g</span>
+            </div>
+            <p class="card-desc">Opulent traditional neckpiece detailed with complex gold filigree, designed for high-value bridal statements.</p>
+            <div class="card-valuation">
+              <div>Est. Price (50g)</div>
+              <p>₹844,513</p>
+            </div>
+            <button class="card-action-btn" onclick="loadCalculatorItem('gold', 'necklace', 50, 20)">Load in Bill Calculator</button>
+          </div>
+        </div>
+
+        <!-- Item 5 (Silver) -->
+        <div class="catalog-card" data-category="silver">
+          <div class="card-img-wrap">
+            <img src="assets/silver_ring.png" alt="Silver Ring / Toe Rings" class="card-img">
+            <span class="card-badge">Pure Silver</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Silver Ring / Toe Rings</h3>
+            <div class="card-specs">
+              <span>Hand-Carved Bands</span>
+              <span>Weight: 10g</span>
+            </div>
+            <p class="card-desc">Elegant sterling silver toe rings (Bichhiya) and simple bands. Features beautiful geometric carvings.</p>
+            <div class="card-valuation">
+              <div>Est. Price (10g)</div>
+              <p>₹3,198</p>
+            </div>
+            <button class="card-action-btn" onclick="loadCalculatorItem('silver', 'ring', 10, 15)">Load in Bill Calculator</button>
+          </div>
+        </div>
+
+        <!-- Item 6 (Silver) -->
+        <div class="catalog-card" data-category="silver">
+          <div class="card-img-wrap">
+            <img src="assets/silver_anklet.png" alt="Silver Payal (Anklets)" class="card-img">
+            <span class="card-badge">Pure Silver</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Silver Payal (Anklets)</h3>
+            <div class="card-specs">
+              <span>Aesthetic Ghungroo</span>
+              <span>Weight: 50g</span>
+            </div>
+            <p class="card-desc">Traditional foot ornaments detailed with tiny bells (ghungroo). Heavy oxidation provides deep tarnish accents.</p>
+            <div class="card-valuation">
+              <div>Est. Price (50g)</div>
+              <p>₹16,686</p>
+            </div>
+            <button class="card-action-btn" onclick="loadCalculatorItem('silver', 'payal', 50, 20)">Load in Bill Calculator</button>
+          </div>
+        </div>
+
+        <!-- Item 7 (Silver) -->
+        <div class="catalog-card" data-category="silver">
+          <div class="card-img-wrap">
+            <img src="assets/silver_utensils.png" alt="Silver Utensils / Puja Items" class="card-img">
+            <span class="card-badge">Pure Silver</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Silver Utensils / Puja Items</h3>
+            <div class="card-specs">
+              <span>Spiritual Plate Set</span>
+              <span>Weight: 250g</span>
+            </div>
+            <p class="card-desc">Traditional silver thali set including a plate and cup with floral relief borders, ideal for spiritual worship and gifting.</p>
+            <div class="card-valuation">
+              <div>Est. Price (250g)</div>
+              <p>₹76,477</p>
+            </div>
+            <button class="card-action-btn" onclick="loadCalculatorItem('silver', 'utensils', 250, 10)">Load in Bill Calculator</button>
+          </div>
+        </div>
+
+        <!-- Item 8 (Copper) -->
+        <div class="catalog-card" data-category="copper">
+          <div class="card-img-wrap">
+            <img src="assets/copper_bracelet.png" alt="Healing Cooper Bracelet" class="card-img">
+            <span class="card-badge">Pure Copper</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Healing Braided Cuff</h3>
+            <div class="card-specs">
+              <span>Pure Wellness</span>
+              <span>Weight: 20g</span>
+            </div>
+            <p class="card-desc">Earthy copper cuff bands braided carefully for alleged magnetic or holistic wellness benefits. Polished for skin comfort.</p>
+            <div class="card-valuation">
+              <div>Est. Price (20g)</div>
+              <p>₹28.33</p>
+            </div>
+            <button class="card-action-btn" onclick="loadCalculatorItem('copper', 'bracelet', 20, 25)">Load in Bill Calculator</button>
+          </div>
+        </div>
+
+        <!-- Item 9 (Copper) -->
+        <div class="catalog-card" data-category="copper">
+          <div class="card-img-wrap">
+            <img src="assets/copper_pendant.png" alt="Antiqued Copper Filigree Pendant" class="card-img">
+            <span class="card-badge">Pure Copper</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Antiqued Filigree Pendant</h3>
+            <div class="card-specs">
+              <span>Dynamic Openwork</span>
+              <span>Weight: 10g</span>
+            </div>
+            <p class="card-desc">Detailed openwork metal pendants designed with a dark antiqued patina coat for a rustic charm look.</p>
+            <div class="card-valuation">
+              <div>Est. Price (10g)</div>
+              <p>₹15.14</p>
+            </div>
+            <button class="card-action-btn" onclick="loadCalculatorItem('copper', 'pendant', 10, 30)">Load in Bill Calculator</button>
+          </div>
+        </div>
+
+        <!-- Item 10 (Gemstone) -->
+        <div class="catalog-card" data-category="gemstone">
+          <div class="card-img-wrap">
+            <img src="assets/gemstone_moonstone.jpg" alt="Rainbow Moonstone Cabochon" class="card-img">
+            <span class="card-badge">Gemstone</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Rainbow Moonstone</h3>
+            <div class="card-specs">
+              <span>Adularescent Schiller</span>
+              <span>Weight: 10ct</span>
+            </div>
+            <p class="card-desc">Stunning cabochon moonstones showing iridescent blue-green sheen. Hand-polished for mystical luxury appeal.</p>
+            <div class="card-valuation">
+              <div>Est. Price (10ct)</div>
+              <p>₹5,665</p>
+            </div>
+            <button class="card-action-btn" onclick="loadCalculatorItem('gemstone', 'moonstone', 10, 1500)">Load in Bill Calculator</button>
+          </div>
+        </div>
+
+        <!-- Item 11 (Gemstone) -->
+        <div class="catalog-card" data-category="gemstone">
+          <div class="card-img-wrap">
+            <img src="assets/gemstone_tanzanite.jpg" alt="Indigo Tanzanite Cabochon" class="card-img">
+            <span class="card-badge">Rare Gemstone</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Indigo Tanzanite</h3>
+            <div class="card-specs">
+              <span>Deep Blue-Violet</span>
+              <span>Weight: 5ct</span>
+            </div>
+            <p class="card-desc">Extremely rare deep indigo tanzanite cabochons. Sourced from the hills of Merelani, Tanzania. Depleting fast.</p>
+            <div class="card-valuation">
+              <div>Est. Price (5ct)</div>
+              <p>₹44,290</p>
+            </div>
+            <button class="card-action-btn" onclick="loadCalculatorItem('gemstone', 'tanzanite', 5, 3000)">Load in Bill Calculator</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATIONAL SECTION (ACCORDION) -->
+    <section class="valuation-section" id="purity-guide">
+      <div class="wrapper">
+        <div class="section-header">
+          <h2>Purity, Wellness, & Care Guides</h2>
+          <p>Essential guides to buying, cleaning, and investing in ornaments</p>
+        </div>
+
+        <div class="accordion-item active">
+          <div class="accordion-title">
+            <h3>Gold Carats: Understanding 24K, 22K, & 18K</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p>Gold is a very soft metal in its pure form. Alloys are mixed to increase strength and hold settings:</p>
+            <ul>
+              <li><b>24K Gold:</b> 99.9% Pure. Very soft, not suitable for heavy wearable jewelry. Mostly used for investment coins and bullion bars.</li>
+              <li><b>22K Gold:</b> 91.6% Pure. Mixed with silver, zinc, or copper. Preferred standard for heavy Indian bridal gold ornaments.</li>
+              <li><b>18K Gold:</b> 75.0% Pure. Highly durable, often mixed with palladium or nickel. Preferred for studded jewelry and daily wear rings.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-title">
+            <h3>Sterling Silver & Traditional Anklets (Payals)</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p>Traditional Indian customs dictate that gold should not be worn on the feet. Thus, anklets (Payals) and toe rings are exclusively made of silver:</p>
+            <ul>
+              <li><b>92.5% Sterling Standard:</b> 92.5% pure silver mixed with 7.5% copper. This ratio provides excellent strength while retaining silver's natural high luster.</li>
+              <li><b>Oxidized Finishes:</b> Intentional dark tarnishing applied in recesses to enhance the visibility of complex, antique patterns.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <div class="accordion-title">
+            <h3>Copper Care: Protecting the Earthy Red Glow</h3>
+            <span class="accordion-icon">▼</span>
+          </div>
+          <div class="accordion-content">
+            <p>Copper is highly reactive to air and moisture, forming a natural green patina over time. Follow these steps to restore its luster:</p>
+            <ul>
+              <li><b>Lemon & Salt Method:</b> Rub a slice of lemon sprinkled with salt over the copper ornament to strip away oxidization instantly. Wash with warm water and dry immediately.</li>
+              <li><b>Acid Bath:</b> For intricate filigree, submerge in warm vinegar mixed with salt for 5 minutes, scrub softly with a brush, rinse, and wipe dry.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">THE VINTAGE VAULT</div>
+    <div class="footer-links">
+      <a href="#logo">Back to Top</a>
+      <a href="#valuation">Market Rates</a>
+      <a href="#pricing-calculator">Calculator</a>
+      <a href="#catalog">Showcase</a>
+      <a href="https://www.jpmorgan.com/insights/global-research/commodities/gold-prices" target="_blank" rel="noopener">J.P. Morgan Global Commodities Research</a>
+    </div>
+    <p class="footer-desc">Billing calculations provided here are estimates. Actual invoices may vary based on exact jeweler markup rates, making charge methods (flat or percentage-based), and local tax rules at purchase time.</p>
+    <div class="footer-bottom">
+      &copy; 2026 The Vintage Vault. All Rights Reserved. Rates tracked live for June 14, 2026.
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
